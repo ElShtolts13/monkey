@@ -33,11 +33,13 @@ class ViewController: UIViewController {
     }
     //MARK: - Пользовательские функции
     @IBAction func buttonAction(_ sender: UIButton) {
-        printMyText()
+        summary(a: 2, b: 2)
     }
     
-    func printMyText () {
-        print("Hi")
+    func summary(a: Int, b: Int) -> Int {
+        let c = a + b
+        print("Summary", c)
+        return c
     }
 }
 
