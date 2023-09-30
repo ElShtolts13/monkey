@@ -9,12 +9,12 @@ import UIKit
 import SnapKit
 
 class SvetoforController: UIViewController {
-
-    @IBOutlet weak var firsSectionView: SvetoforSectionView!
-    @IBOutlet weak var secondSectionView: SvetoforSectionView!
-    @IBOutlet weak var thirdSectionView: SvetoforSectionView!
-
     
+    var firsSectionView = SvetoforSectionView(colorLight: .red)
+    var secondSectionView = SvetoforSectionView(colorLight: .yellow)
+    var thirdSectionView = SvetoforSectionView(colorLight: .green)
+    
+    let stackView = UIStackView(frame: .zero)
     
     @IBOutlet weak var turnButton: UIButton!
     
@@ -23,34 +23,64 @@ class SvetoforController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firsSectionView.turnOff()
-        secondSectionView.turnOff()
-        thirdSectionView.turnOff()
+        view.addSubview(stackView)
         
-        firsSectionView.colorLight = .red
-        secondSectionView.colorLight = .yellow
-        thirdSectionView.colorLight = .green
-    }
-        //MARK: - Пользовательские функции
+        stackView.spacing = 12
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fill
         
-
-        //MARK: - Actions
+        stackView.addArrangedSubview(firsSectionView)
+        stackView.addArrangedSubview(secondSectionView)
+        stackView.addArrangedSubview(thirdSectionView)
         
-        
-        @IBAction func turnButtonAction(_ sender: Any) {
-            if firsSectionView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
-                firsSectionView.turnOn()
-            } else if firsSectionView.isOn() {
-                firsSectionView.turnOff()
-                secondSectionView.turnOn()
-            } else if secondSectionView.isOn() {
-                secondSectionView.turnOff()
-                thirdSectionView.turnOn()
-            } else if thirdSectionView.isOn() {
-                thirdSectionView.turnOff()
-                firsSectionView.turnOn()
-            }
+        stackView.snp.makeConstraints { make in
+            make.width.equalTo(300)
+            make.height.greaterThanOrEqualTo(300)
+            make.top.equalTo(64)
+            make.centerX.equalToSuperview()
+            
+        }
+        firsSectionView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            
+        }
+        secondSectionView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            
+        }
+        thirdSectionView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            
         }
         
-        
+    }
+    
+//    firsSectionView.turnOff()
+//    secondSectionView.turnOff()
+//    thirdSectionView.turnOff()
+    
+    
+    //MARK: - Пользовательские функции
+    
+    
+    //MARK: - Actions
+    
+    
+    @IBAction func turnButtonAction(_ sender: Any) {
+        if firsSectionView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
+            firsSectionView.turnOn()
+        } else if firsSectionView.isOn() {
+            firsSectionView.turnOff()
+            secondSectionView.turnOn()
+        } else if secondSectionView.isOn() {
+            secondSectionView.turnOff()
+            thirdSectionView.turnOn()
+        } else if thirdSectionView.isOn() {
+            thirdSectionView.turnOff()
+            firsSectionView.turnOn()
+        }
+    }
 }
+        
+
