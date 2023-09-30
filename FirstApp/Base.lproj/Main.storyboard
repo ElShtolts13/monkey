@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,51 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-tL-H5d" userLabel="redView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
-                                <rect key="frame" x="137.66666666666666" y="91" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6GW-pY-58f"/>
-                                    <constraint firstAttribute="width" constant="100" id="oly-11-7if"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iu-2t-sU0" userLabel="greenView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
-                                <rect key="frame" x="137.66666666666666" y="379" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-h0-vOs">
-                                <rect key="frame" x="122" y="685" width="150" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-h0-vOs">
+                                <rect key="frame" x="112.66666666666669" y="685" width="150" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Переключатель"/>
                                 <connections>
                                     <action selector="turnButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEH-2H-EyT"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="zom-j6-gdY" userLabel="yellowView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
-                                <rect key="frame" x="137.66666666666666" y="235" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="height" secondItem="lqd-tL-H5d" secondAttribute="height" id="G6n-eM-ABk"/>
-                            <constraint firstItem="lqd-tL-H5d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UEm-gl-xca"/>
-                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="centerX" secondItem="lqd-tL-H5d" secondAttribute="centerX" id="V4S-9n-doD"/>
-                            <constraint firstItem="zom-j6-gdY" firstAttribute="centerX" secondItem="lqd-tL-H5d" secondAttribute="centerX" id="YV6-sb-2Ax"/>
-                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="top" secondItem="zom-j6-gdY" secondAttribute="bottom" constant="44" id="aps-d9-oMe"/>
-                            <constraint firstItem="zom-j6-gdY" firstAttribute="top" secondItem="lqd-tL-H5d" secondAttribute="bottom" constant="44" id="cE4-cy-frU"/>
-                            <constraint firstItem="zom-j6-gdY" firstAttribute="height" secondItem="lqd-tL-H5d" secondAttribute="height" id="dTu-vq-7kf"/>
-                            <constraint firstItem="zom-j6-gdY" firstAttribute="width" secondItem="lqd-tL-H5d" secondAttribute="width" id="hmD-Cy-VLI"/>
-                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="width" secondItem="lqd-tL-H5d" secondAttribute="width" id="hr7-qT-Ogz"/>
-                            <constraint firstItem="lqd-tL-H5d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="hyo-8Q-NRZ"/>
+                            <constraint firstItem="AiD-h0-vOs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GFz-1S-FeH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AiD-h0-vOs" secondAttribute="bottom" constant="58" id="UIm-H3-gVI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firsSectionView" destination="lqd-tL-H5d" id="JNw-1y-dJZ"/>
-                        <outlet property="secondSectionView" destination="zom-j6-gdY" id="hUu-dJ-BbU"/>
-                        <outlet property="thirdSectionView" destination="0Iu-2t-sU0" id="fH4-g8-fmi"/>
                         <outlet property="turnButton" destination="AiD-h0-vOs" id="90n-DE-c9o"/>
                     </connections>
                 </viewController>
@@ -69,15 +40,4 @@
             <point key="canvasLocation" x="-1156.4885496183206" y="-411.26760563380282"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
