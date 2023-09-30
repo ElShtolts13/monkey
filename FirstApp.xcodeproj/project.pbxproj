@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		CE1CD1422AC570AC00B349ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1412AC570AC00B349ED /* AppDelegate.swift */; };
 		CE1CD1442AC570AC00B349ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1432AC570AC00B349ED /* SceneDelegate.swift */; };
-		CE1CD1462AC570AC00B349ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1452AC570AC00B349ED /* ViewController.swift */; };
+		CE1CD1462AC570AC00B349ED /* SvetoforController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1452AC570AC00B349ED /* SvetoforController.swift */; };
 		CE1CD1492AC570AC00B349ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1CD1472AC570AC00B349ED /* Main.storyboard */; };
 		CE1CD14B2AC570B100B349ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1CD14A2AC570B100B349ED /* Assets.xcassets */; };
 		CE1CD14E2AC570B100B349ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1CD14C2AC570B100B349ED /* LaunchScreen.storyboard */; };
 		CE1CD1592AC570B100B349ED /* FirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1582AC570B100B349ED /* FirstAppTests.swift */; };
 		CE1CD1632AC570B100B349ED /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1622AC570B100B349ED /* FirstAppUITests.swift */; };
 		CE1CD1652AC570B100B349ED /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1642AC570B100B349ED /* FirstAppUITestsLaunchTests.swift */; };
+		CED13C7F2AC7572D0077CE9A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED13C7E2AC7572D0077CE9A /* SnapKit */; };
+		CED13C812AC8457F0077CE9A /* SvetoforSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 		CE1CD13E2AC570AC00B349ED /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1CD1412AC570AC00B349ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1CD1432AC570AC00B349ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE1CD1452AC570AC00B349ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE1CD1452AC570AC00B349ED /* SvetoforController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvetoforController.swift; sourceTree = "<group>"; };
 		CE1CD1482AC570AC00B349ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE1CD14A2AC570B100B349ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1CD14D2AC570B100B349ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		CE1CD15E2AC570B100B349ED /* FirstAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1CD1622AC570B100B349ED /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		CE1CD1642AC570B100B349ED /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvetoforSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED13C7F2AC7572D0077CE9A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 		CE1CD1352AC570AC00B349ED = {
 			isa = PBXGroup;
 			children = (
+				CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */,
 				CE1CD1402AC570AC00B349ED /* FirstApp */,
 				CE1CD1572AC570B100B349ED /* FirstAppTests */,
 				CE1CD1612AC570B100B349ED /* FirstAppUITests */,
@@ -101,7 +106,7 @@
 			children = (
 				CE1CD1412AC570AC00B349ED /* AppDelegate.swift */,
 				CE1CD1432AC570AC00B349ED /* SceneDelegate.swift */,
-				CE1CD1452AC570AC00B349ED /* ViewController.swift */,
+				CE1CD1452AC570AC00B349ED /* SvetoforController.swift */,
 				CE1CD1472AC570AC00B349ED /* Main.storyboard */,
 				CE1CD14A2AC570B100B349ED /* Assets.xcassets */,
 				CE1CD14C2AC570B100B349ED /* LaunchScreen.storyboard */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = FirstApp;
+			packageProductDependencies = (
+				CED13C7E2AC7572D0077CE9A /* SnapKit */,
+			);
 			productName = FirstApp;
 			productReference = CE1CD13E2AC570AC00B349ED /* FirstApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = CE1CD1352AC570AC00B349ED;
+			packageReferences = (
+				CED13C7D2AC7572D0077CE9A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CE1CD13F2AC570AC00B349ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1CD1462AC570AC00B349ED /* ViewController.swift in Sources */,
+				CED13C812AC8457F0077CE9A /* SvetoforSectionView.swift in Sources */,
+				CE1CD1462AC570AC00B349ED /* SvetoforController.swift in Sources */,
 				CE1CD1422AC570AC00B349ED /* AppDelegate.swift in Sources */,
 				CE1CD1442AC570AC00B349ED /* SceneDelegate.swift in Sources */,
 			);
@@ -602,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED13C7D2AC7572D0077CE9A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED13C7E2AC7572D0077CE9A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED13C7D2AC7572D0077CE9A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE1CD1362AC570AC00B349ED /* Project object */;
 }
