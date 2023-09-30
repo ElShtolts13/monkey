@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,27 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Svetofor Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SvetoforController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-tL-H5d" userLabel="redView">
-                                <rect key="frame" x="96" y="59" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqd-tL-H5d" userLabel="redView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="137.66666666666666" y="91" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6GW-pY-58f"/>
+                                    <constraint firstAttribute="width" constant="100" id="oly-11-7if"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zom-j6-gdY" userLabel="yellowView">
-                                <rect key="frame" x="96" y="269" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Iu-2t-sU0" userLabel="greenView">
-                                <rect key="frame" x="96" y="477" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iu-2t-sU0" userLabel="greenView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="137.66666666666666" y="379" width="100" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiD-h0-vOs">
@@ -40,15 +37,31 @@
                                     <action selector="turnButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEH-2H-EyT"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="zom-j6-gdY" userLabel="yellowView" customClass="SvetoforSectionView" customModule="FirstApp" customModuleProvider="target">
+                                <rect key="frame" x="137.66666666666666" y="235" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="height" secondItem="lqd-tL-H5d" secondAttribute="height" id="G6n-eM-ABk"/>
+                            <constraint firstItem="lqd-tL-H5d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UEm-gl-xca"/>
+                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="centerX" secondItem="lqd-tL-H5d" secondAttribute="centerX" id="V4S-9n-doD"/>
+                            <constraint firstItem="zom-j6-gdY" firstAttribute="centerX" secondItem="lqd-tL-H5d" secondAttribute="centerX" id="YV6-sb-2Ax"/>
+                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="top" secondItem="zom-j6-gdY" secondAttribute="bottom" constant="44" id="aps-d9-oMe"/>
+                            <constraint firstItem="zom-j6-gdY" firstAttribute="top" secondItem="lqd-tL-H5d" secondAttribute="bottom" constant="44" id="cE4-cy-frU"/>
+                            <constraint firstItem="zom-j6-gdY" firstAttribute="height" secondItem="lqd-tL-H5d" secondAttribute="height" id="dTu-vq-7kf"/>
+                            <constraint firstItem="zom-j6-gdY" firstAttribute="width" secondItem="lqd-tL-H5d" secondAttribute="width" id="hmD-Cy-VLI"/>
+                            <constraint firstItem="0Iu-2t-sU0" firstAttribute="width" secondItem="lqd-tL-H5d" secondAttribute="width" id="hr7-qT-Ogz"/>
+                            <constraint firstItem="lqd-tL-H5d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="hyo-8Q-NRZ"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenView" destination="0Iu-2t-sU0" id="fH4-g8-fmi"/>
-                        <outlet property="redView" destination="lqd-tL-H5d" id="JNw-1y-dJZ"/>
+                        <outlet property="firsSectionView" destination="lqd-tL-H5d" id="JNw-1y-dJZ"/>
+                        <outlet property="secondSectionView" destination="zom-j6-gdY" id="hUu-dJ-BbU"/>
+                        <outlet property="thirdSectionView" destination="0Iu-2t-sU0" id="fH4-g8-fmi"/>
                         <outlet property="turnButton" destination="AiD-h0-vOs" id="90n-DE-c9o"/>
-                        <outlet property="yellowView" destination="zom-j6-gdY" id="hUu-dJ-BbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
