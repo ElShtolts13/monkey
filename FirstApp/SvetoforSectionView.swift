@@ -36,11 +36,20 @@ class SvetoforSectionView: UIView {
         setUpView()
     }
     
-    func setUpView() {
+    // MARK: - Private
+    
+    private func setUpView() {
         layer.cornerRadius = frame.size.width / 2
         layer.borderWidth = 2
         layer.borderColor = UIColor.black.cgColor
         backgroundColor = .clear
+    }
+    // MARK: - Public
+    
+    
+    /// Здесь назначается цвет секции, при создании вью сториборд
+    func setColorLight(_ colorLight: UIColor) {
+        self.colorLight = colorLight
     }
     
     //Включение

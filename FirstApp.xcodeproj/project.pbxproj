@@ -18,6 +18,7 @@
 		CE1CD1652AC570B100B349ED /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CD1642AC570B100B349ED /* FirstAppUITestsLaunchTests.swift */; };
 		CED13C7F2AC7572D0077CE9A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CED13C7E2AC7572D0077CE9A /* SnapKit */; };
 		CED13C812AC8457F0077CE9A /* SvetoforSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */; };
+		CED13C832AC8A5E00077CE9A /* SvetoforView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED13C822AC8A5E00077CE9A /* SvetoforView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CE1CD1622AC570B100B349ED /* FirstAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITests.swift; sourceTree = "<group>"; };
 		CE1CD1642AC570B100B349ED /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvetoforSectionView.swift; sourceTree = "<group>"; };
+		CED13C822AC8A5E00077CE9A /* SvetoforView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvetoforView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,6 @@
 		CE1CD1352AC570AC00B349ED = {
 			isa = PBXGroup;
 			children = (
-				CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */,
 				CE1CD1402AC570AC00B349ED /* FirstApp */,
 				CE1CD1572AC570B100B349ED /* FirstAppTests */,
 				CE1CD1612AC570B100B349ED /* FirstAppUITests */,
@@ -107,6 +108,8 @@
 				CE1CD1412AC570AC00B349ED /* AppDelegate.swift */,
 				CE1CD1432AC570AC00B349ED /* SceneDelegate.swift */,
 				CE1CD1452AC570AC00B349ED /* SvetoforController.swift */,
+				CED13C802AC8457F0077CE9A /* SvetoforSectionView.swift */,
+				CED13C822AC8A5E00077CE9A /* SvetoforView.swift */,
 				CE1CD1472AC570AC00B349ED /* Main.storyboard */,
 				CE1CD14A2AC570B100B349ED /* Assets.xcassets */,
 				CE1CD14C2AC570B100B349ED /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				CED13C812AC8457F0077CE9A /* SvetoforSectionView.swift in Sources */,
 				CE1CD1462AC570AC00B349ED /* SvetoforController.swift in Sources */,
+				CED13C832AC8A5E00077CE9A /* SvetoforView.swift in Sources */,
 				CE1CD1422AC570AC00B349ED /* AppDelegate.swift in Sources */,
 				CE1CD1442AC570AC00B349ED /* SceneDelegate.swift in Sources */,
 			);
