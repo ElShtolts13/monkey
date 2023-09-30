@@ -22,34 +22,33 @@ class SvetoforController: UIViewController {
     //Экран БЫЛ загружен
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        firsSectionView.turnOff()
+        secondSectionView.turnOff()
+        thirdSectionView.turnOff()
+        
+        firsSectionView.colorLight = .red
+        secondSectionView.colorLight = .yellow
+        thirdSectionView.colorLight = .green
     }
         //MARK: - Пользовательские функции
         
-//        func setUpView(view: UIView) {
-//            view.layer.cornerRadius = redViewHeightConstraint.constant / 2
-//            view.layer.borderWidth = 2
-//            view.layer.borderColor = UIColor.black.cgColor
-//            view.backgroundColor = .clear
-//        }
-        
+
         //MARK: - Actions
         
         
         @IBAction func turnButtonAction(_ sender: Any) {
-            if firsSectionView.backgroundColor == .clear && secondSectionView.backgroundColor == .clear
-                && thirdSectionView.backgroundColor == .clear {
-                firsSectionView.backgroundColor = .red
-            } else if firsSectionView.backgroundColor == .red {
-                firsSectionView.backgroundColor = .clear
-                secondSectionView.backgroundColor = .yellow
-            } else if secondSectionView.backgroundColor == .yellow {
-                secondSectionView.backgroundColor = .clear
-                thirdSectionView.backgroundColor = .green
-            } else if thirdSectionView.backgroundColor == .green {
-                thirdSectionView.backgroundColor = .clear
-                
+            if firsSectionView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
+                firsSectionView.turnOn()
+            } else if firsSectionView.isOn() {
+                firsSectionView.turnOff()
+                secondSectionView.turnOn()
+            } else if secondSectionView.isOn() {
+                secondSectionView.turnOff()
+                thirdSectionView.turnOn()
+            } else if thirdSectionView.isOn() {
+                thirdSectionView.turnOff()
+                firsSectionView.turnOn()
             }
         }
         
