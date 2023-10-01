@@ -6,11 +6,27 @@
 //
 
 import UIKit
+enum Colors {
+    case red
+    case orange
+    case green
+    
+    func color() ->UIColor {
+        switch self {
+        case .red:
+            return UIColor.red
+        case .orange:
+            return UIColor.orange
+        case .green:
+            return UIColor.green
+        }
+    }
+}
 
 class SvetoforSectionView: UIView {
     
-    var colorLight: UIColor?
-    init(colorLight: UIColor) {
+    private var colorLight: Colors?
+    init(colorLight: Colors) {
         super.init(frame: .zero)
         self.colorLight = colorLight
         
@@ -48,13 +64,13 @@ class SvetoforSectionView: UIView {
     
     
     /// Здесь назначается цвет секции, при создании вью сториборд
-    func setColorLight(_ colorLight: UIColor) {
+    func setColorLight(_ colorLight: Colors) {
         self.colorLight = colorLight
     }
     
     //Включение
     func turnOn() {
-        backgroundColor = colorLight
+        backgroundColor = colorLight?.color()
     }
     
     //Выключение

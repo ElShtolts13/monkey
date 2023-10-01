@@ -11,11 +11,8 @@ import SnapKit
 class SvetoforView: UIView {
 
     private let sections: [SvetoforSectionView] = [SvetoforSectionView(colorLight: .red),
-                                                   SvetoforSectionView(colorLight: .red),
-                                                   SvetoforSectionView(colorLight: .red),
-                                                   SvetoforSectionView(colorLight: .red),
-                                                   SvetoforSectionView(colorLight: .red),
-                                                   SvetoforSectionView(colorLight: .red)]
+                                                   SvetoforSectionView(colorLight: .orange),
+                                                   SvetoforSectionView(colorLight: .green)]
     
     let stackView = UIStackView(frame: .zero)
     
