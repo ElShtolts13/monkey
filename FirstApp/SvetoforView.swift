@@ -9,10 +9,13 @@ import UIKit
 import SnapKit
 
 class SvetoforView: UIView {
-    
-    var firsSectionView = SvetoforSectionView(colorLight: .red)
-    var secondSectionView = SvetoforSectionView(colorLight: .yellow)
-    var thirdSectionView = SvetoforSectionView(colorLight: .green)
+
+    private let sections: [SvetoforSectionView] = [SvetoforSectionView(colorLight: .red),
+                                                   SvetoforSectionView(colorLight: .red),
+                                                   SvetoforSectionView(colorLight: .red),
+                                                   SvetoforSectionView(colorLight: .red),
+                                                   SvetoforSectionView(colorLight: .red),
+                                                   SvetoforSectionView(colorLight: .red)]
     
     let stackView = UIStackView(frame: .zero)
     
@@ -30,17 +33,12 @@ class SvetoforView: UIView {
     }
     //MARK: - Public
     func switchMode () {
-        if firsSectionView.isOff() && secondSectionView.isOff() && thirdSectionView.isOff() {
-            firsSectionView.turnOn()
-        } else if firsSectionView.isOn() {
-            firsSectionView.turnOff()
-            secondSectionView.turnOn()
-        } else if secondSectionView.isOn() {
-            secondSectionView.turnOff()
-            thirdSectionView.turnOn()
-        } else if thirdSectionView.isOn() {
-            thirdSectionView.turnOff()
-            firsSectionView.turnOn()
+        if let indexOfFirstSection = sections.firstIndex(where: { $0.isOn() }), indexOfFirstSection < sections.count - 1 {
+            sections[indexOfFirstSection].turnOff()
+            sections[indexOfFirstSection + 1].turnOn()
+        } else {
+            sections.forEach({ $0.turnOff() })
+            sections.first?.turnOn()
         }
     }
     
@@ -54,29 +52,19 @@ class SvetoforView: UIView {
         stackView.alignment = .center
         stackView.distribution = .fill
         
-        stackView.addArrangedSubview(firsSectionView)
-        stackView.addArrangedSubview(secondSectionView)
-        stackView.addArrangedSubview(thirdSectionView)
-        
+        sections.forEach { section in
+            stackView.addArrangedSubview(section)
+            section.snp.makeConstraints { make in
+                make.width.height.equalTo(100)
+            }
+        }
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-        }
-        firsSectionView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
-            
-        }
-        secondSectionView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
-            
-        }
-        thirdSectionView.snp.makeConstraints { make in
-            make.width.height.equalTo(100)
-            
+
         }
     }
     private func setStartState() {
-        firsSectionView.turnOff()
-        secondSectionView.turnOff()
-        thirdSectionView.turnOff()
+
+        sections.forEach({ $0.turnOff()})
     }
 }
